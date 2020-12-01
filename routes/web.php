@@ -17,9 +17,12 @@
 Auth::routes();
 
 Route::get('/', 'HomeController@index')->name('home');
+Route::get('/home', 'HomeController@index')->name('home');
 
-Route::resource('customer', 'CustomerController');
-Route::resource('item', 'ItemController');
-Route::resource('brand', 'BrandController');
-Route::resource('category', 'CategoryController');
-Route::resource('order', 'OrderController');
+Route::group(['middleware' => 'auth'], function () {
+    Route::resource('customer', 'CustomerController');
+    Route::resource('item', 'ItemController');
+    Route::resource('brand', 'BrandController');
+    Route::resource('category', 'CategoryController');
+    Route::resource('order', 'OrderController');
+});
