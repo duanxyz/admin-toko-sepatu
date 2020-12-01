@@ -1,10 +1,10 @@
-@extends('layout.main')
+@extends('layouts.app')
 
 @section('title', 'Edit Category | Toko Sepatu')
 
 @section('titlePage', 'Edit Category')
 
-@section('main')
+@section('content')
 <div class="card">
     <form action="{{ route('category.update',$category->id) }}" method="post">
         @csrf

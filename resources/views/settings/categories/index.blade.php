@@ -1,10 +1,10 @@
-@extends('layout.main')
+@extends('layouts.app')
 
 @section('title', 'Table Category | Toko Sepatu')
 
 @section('titlePage', 'Table Category')
 
-@section('main')
+@section('content')
 <div class="card">
     <div class="card-header">
         <button type="button" class="btn btn-success" data-toggle="modal" data-target="#addModal">

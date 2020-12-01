@@ -1,16 +1,16 @@
-@extends('layout.main')
+@extends('layouts.app')
 
 @section('title', 'Table Order | Toko Sepatu')
 
 @section('titlePage', 'Table Order')
 
-@section('main')
+@section('content')
 <div class="card">
     <div class="card-header">
         <button class="btn btn-success">Add</button>
     </div>
     <table class="table table-bordered">
-    <thead>
+        <thead>
             <tr>
                 <th style="width: 5%">No</th>
                 <th>Nama Member</th>
@@ -21,7 +21,7 @@
             </tr>
         </thead>
         <tbody>
-        <tr>
+            <tr>
                 <td>1</td>
                 <td>Maulida Hanifa</td>
                 <td>Sepatu Turning</td>

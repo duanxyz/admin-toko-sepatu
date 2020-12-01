@@ -1,10 +1,10 @@
-@extends('layout.main')
+@extends('layouts.app')
 
 @section('title', 'Table Customer | Toko Sepatu')
 
 @section('titlePage', 'Table Customer')
 
-@section('main')
+@section('content')
 <div class="card">
     <div class="card-header">
         {{-- <button class="btn btn-success">Add</button> --}}

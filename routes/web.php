@@ -11,9 +11,12 @@
 |
 */
 
-Route::get('/', function () {
-    return view('dashboard.index');
-});
+// Route::get('/', function () {
+//     return view('dashboard.index');
+// });
+Auth::routes();
+
+Route::get('/', 'HomeController@index')->name('home');
 
 Route::resource('customer', 'CustomerController');
 Route::resource('item', 'ItemController');
