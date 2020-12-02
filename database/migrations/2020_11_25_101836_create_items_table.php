@@ -30,6 +30,8 @@ class CreateItemsTable extends Migration
             $table->bigInteger('stock');
             $table->bigInteger('weight');
             $table->string('condition');
+            $table->string('sold');
+            $table->string('seen');
             $table->string('description');
             $table->timestamps();
         });

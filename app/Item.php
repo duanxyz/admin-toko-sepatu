@@ -27,4 +27,14 @@ class Item extends Model
     {
         return $this->belongsToMany(Review::class);
     }
+
+    public function colors()
+    {
+        return $this->belongsToMany(Color::class);
+    }
+
+    public function sizes()
+    {
+        return $this->belongsToMany(Size::class);
+    }
 }
