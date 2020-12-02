@@ -21,6 +21,7 @@ class CreateOrdersTable extends Migration
                 ->on('customers')
                 ->onDelete('cascade');
             $table->bigInteger('total_price');
+            $table->string('status')->default('troli');
             $table->timestamps();
         });
     }
