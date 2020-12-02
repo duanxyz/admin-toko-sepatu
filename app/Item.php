@@ -22,4 +22,9 @@ class Item extends Model
     {
         return $this->belongsToMany(Order::class, 'order_details');
     }
+
+    public function reviews()
+    {
+        return $this->belongsToMany(Review::class);
+    }
 }

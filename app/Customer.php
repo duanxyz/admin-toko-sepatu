@@ -22,4 +22,14 @@ class Customer extends Model
     {
         return $this->hasMany(Address::class);
     }
+
+    public function photos()
+    {
+        return $this->hasMany(Photo::class);
+    }
+
+    public function review()
+    {
+        return $this->hasMany(Review::class);
+    }
 }
