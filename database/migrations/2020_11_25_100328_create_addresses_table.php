@@ -15,7 +15,7 @@ class CreateAddressesTable extends Migration
     {
         Schema::create('addresses', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->bigInteger('customer_id')->unique()->unsigned();
+            $table->bigInteger('customer_id')->unsigned();
             $table->foreign('customer_id')
                 ->references('id')
                 ->on('customers')

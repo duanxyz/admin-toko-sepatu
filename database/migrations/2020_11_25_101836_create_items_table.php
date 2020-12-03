@@ -15,12 +15,12 @@ class CreateItemsTable extends Migration
     {
         Schema::create('items', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->bigInteger('brand_id')->unique()->unsigned();
+            $table->bigInteger('brand_id')->unsigned();
             $table->foreign('brand_id')
                 ->references('id')
                 ->on('brands')
                 ->onDelete('cascade');
-            $table->bigInteger('category_id')->unique()->unsigned();
+            $table->bigInteger('category_id')->unsigned();
             $table->foreign('category_id')
                 ->references('id')
                 ->on('categories')
@@ -32,7 +32,7 @@ class CreateItemsTable extends Migration
             $table->string('condition');
             $table->string('sold');
             $table->string('seen');
-            $table->string('description');
+            $table->text('description');
             $table->timestamps();
         });
     }

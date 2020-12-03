@@ -23,6 +23,11 @@ class Item extends Model
         return $this->belongsToMany(Order::class, 'order_details');
     }
 
+    public function photos()
+    {
+        return $this->hasMany(Photo::class);
+    }
+
     public function reviews()
     {
         return $this->belongsToMany(Review::class);

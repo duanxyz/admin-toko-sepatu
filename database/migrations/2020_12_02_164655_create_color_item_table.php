@@ -14,12 +14,12 @@ class CreateColorItemTable extends Migration
     public function up()
     {
         Schema::create('color_item', function (Blueprint $table) {
-            $table->bigInteger('item_id')->unique()->unsigned();
+            $table->bigInteger('item_id')->unsigned();
             $table->foreign('item_id')
                 ->references('id')
                 ->on('items')
                 ->onDelete('cascade');
-            $table->bigInteger('color_id')->unique()->unsigned();
+            $table->bigInteger('color_id')->unsigned();
             $table->foreign('color_id')
                 ->references('id')
                 ->on('colors')

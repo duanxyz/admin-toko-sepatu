@@ -14,12 +14,12 @@ class CreateItemSizeTable extends Migration
     public function up()
     {
         Schema::create('item_size', function (Blueprint $table) {
-            $table->bigInteger('item_id')->unique()->unsigned();
+            $table->bigInteger('item_id')->unsigned();
             $table->foreign('item_id')
                 ->references('id')
                 ->on('items')
                 ->onDelete('cascade');
-            $table->bigInteger('size_id')->unique()->unsigned();
+            $table->bigInteger('size_id')->unsigned();
             $table->foreign('size_id')
                 ->references('id')
                 ->on('sizes')
