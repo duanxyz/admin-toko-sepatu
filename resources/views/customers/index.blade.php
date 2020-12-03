@@ -58,4 +58,5 @@
         </table>
     </div>
 </div>
+{{ $data->links() }}
 @endsection

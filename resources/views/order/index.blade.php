@@ -25,7 +25,9 @@
                 <tr>
                     <td>{{ $loop->index+1 }}</td>
                     <td>{{ $item->customer->name }}</td>
-                    <td></td>
+                    <td>
+
+                    </td>
                     <td>Rp. {{ $item->total_price }}</td>
                     <td>{{ $item->status }}</td>
                     <td class="table-action">
@@ -38,4 +40,5 @@
         </table>
     </div>
 </div>
+{{ $data->links() }}
 @endsection

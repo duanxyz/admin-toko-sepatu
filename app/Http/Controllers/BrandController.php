@@ -14,7 +14,7 @@ class BrandController extends Controller
      */
     public function index()
     {
-        $data = Brand::all();
+        $data = Brand::paginate(5);
         return view('settings.brands.index', compact('data'));
     }
 

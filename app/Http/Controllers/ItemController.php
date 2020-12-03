@@ -14,7 +14,7 @@ class ItemController extends Controller
      */
     public function index()
     {
-        $data = Item::all();
+        $data = Item::paginate(10);
         return view('items.index', compact('data'));
     }
 
